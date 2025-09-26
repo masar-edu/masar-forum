@@ -121,7 +121,6 @@ const Header: FC = () => {
             setShowMobileSearchInput(false);
           }}
         />
-
         <Navbar.Brand
           to="/"
           as={Link}
@@ -205,13 +204,11 @@ const Header: FC = () => {
           </>
         )}
       </div>
-
       {showMobileSearchInput && (
         <div className="w-100 px-3 mt-2 d-block d-lg-none">
           <SearchInput />
         </div>
       )}
-
       <MobileSideNav show={showMobileSideNav} onHide={setShowMobileSideNav} />
     </Navbar>
   );
