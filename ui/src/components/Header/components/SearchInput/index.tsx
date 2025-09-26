@@ -20,12 +20,12 @@
 import { FC, useState, useEffect } from 'react';
 import { Form, FormControl } from 'react-bootstrap';
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 import { Icon } from '@/components';
 
 const SearchInput: FC<{ className?: string }> = ({ className }) => {
-  const { t } = useTranslation('translation', { keyPrefix: 'header' });
+  // const { t } = useTranslation('translation', { keyPrefix: 'header' });
   const navigate = useNavigate();
   const location = useLocation();
   const [urlSearch] = useSearchParams();
@@ -65,7 +65,8 @@ const SearchInput: FC<{ className?: string }> = ({ className }) => {
       </div>
       <FormControl
         type="search"
-        placeholder={t('search.placeholder')}
+        /* @ts-ignore */
+        placeholder="this search is for masar forum"
         className="placeholder-search"
         value={searchStr}
         name="q"
